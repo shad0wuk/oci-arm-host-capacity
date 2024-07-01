@@ -1,0 +1,15 @@
+name: oci-arm-host-capacity run
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  oci-arm-host-capacity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run oci-arm-host-capacity script
+        run: bash ./oci-arm-host-capacity.sh
