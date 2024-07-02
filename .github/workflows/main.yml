@@ -11,5 +11,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Set execute permissions
+        run: chmod +x ./oci-arm-host-capacity.sh
+
       - name: Run oci-arm-host-capacity script
-        run: bash ./oci-arm-host-capacity.sh
+        run: ./oci-arm-host-capacity.sh
